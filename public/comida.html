@@ -15,16 +15,11 @@
         }
     </style>
     <audio id="inTheEnd" controls autoplay loop>
-        <source src="/HTML/practico/assets/InTheEnd.mp3" type="audio/mpeg">
+        <source src="../assets/InTheEnd.mp3" type="audio/mpeg">
         Tu navegador no soporta el audio.
     </audio>
 
-    <script>
-        window.onload = function() {
-            var audio = document.getElementById('inTheEnd');
-            audio.volume = 0.3;
-        }
-    </script>
+    <script src="../assets/audioController.js"></script>
 </head>
 <body>
     <header>
