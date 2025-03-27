@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Personal</title>
+    <style>
+        body {
+            color: white;
+            background-image: url('https://i.pinimg.com/736x/fe/8f/73/fe8f7350bf24b567ab1a93f208c78db7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+        }
+    </style>
+    <audio id="inTheEnd" controls autoplay loop>
+        <source src="/HTML/practico/assets/InTheEnd.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('inTheEnd');
+            audio.volume = 0.3;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a mi Página</h1>
+        <img src="https://i.pinimg.com/222x/af/99/7a/af997a79511edc73bf3fd992e109e8ef.jpg" alt="GOKU" width="500" height="300">
+        <img src="/HTML/practico/assets/COOL.gif" alt="COOL" width="500" height="300">
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <h2>Música</h2>
+                <a href="/HTML/practico/public/musica.html">
+                    <img src="/HTML/practico/assets/miku.gif" alt="Música" width="500" height="300">
+                </a>
+            </li>
+            <li>
+                <h2>Cine</h2>
+                <a href="/HTML/practico/public/cine.html">
+                    <img src="/HTML/practico/assets/cine.gif" alt="Cine" width="500" height="300">
+                </a>
+            </li>
+            <li>
+                <h2>Comida</h2>
+                <a href="/HTML/practico/public/comida.html">
+                    <img src="/HTML/practico/assets/comida.gif" alt="Comida" width="500" height="300">
+                </a>
+            </li>
+        </ul>
+    
+    </nav>
+    <section>
+        <p>.</p>
+    </section>
+</body>
+</html>

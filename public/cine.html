@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine</title>
+    <style>
+        body {
+            color: white;
+            font-family: "Comic Sans MS", cursive;
+            background-image: url('https://i.pinimg.com/736x/fe/8f/73/fe8f7350bf24b567ab1a93f208c78db7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+        }
+    </style>
+    <audio id="inTheEnd" controls autoplay loop>
+        <source src="/HTML/practico/assets/InTheEnd.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('inTheEnd');
+            audio.volume = 0.3;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mis Películas Favoritas</h1>
+        <section>
+            <div class="movie-section">
+                <h3>1. The Batman</h3>
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/81ef275effa427553a847bc220bebe1dc314b2e79d00333f94a6bcadd7cce851._SX1080_FMjpg_.jpg" width="500" height="300" alt="Película 1">
+            </div>
+            <div class="movie-section">
+                <h3>2. La la Land</h3>
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/08d4af5a313d87716312d3cbd8ecb786ebe9347b7990abf7afbc7c437740391c._SX1080_FMjpg_.jpg" width="500" height="300" alt="Película 2">
+            </div>
+            <div class="movie-section">
+                <h3>3. Eterno Resplandor</h3>
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/9b973f7a8c9636ffb39c42e6d4a1e0a567079d2e041d166960409d30e9c1528b.jpg" width="500" height="300" alt="Película 3">
+            </div>
+            <div class="movie-section">
+                <h3>4. Everything Everywhere All at Once</h3>
+                    <img src="https://occ-0-8407-1007.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABc11OBO-LYIGdGCQRNM9LgK5kgQNvlSbxnqsmMCxZZREbG-Y0GXBgszr7Ugxq28vbDTCzbGjwYL8tQvcqGl7Xn9aWaDc1uJ25ubw.jpg?r=41a" width="500" height="300" alt="Película 4">
+            </div>
+            <div class="movie-section">
+                <h3>5. Nosferatu</h3>
+
+                    <img src="https://images.justwatch.com/backdrop/323263011/s640/nosferatu" width="500" height="300" alt="Película 5">
+
+            </div>
+            <div class="movie-section">
+                <h3>Mencion Honorifica a toda la saga de Star Wars</h3>
+
+                    <img src="https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/VWJTP5HHE5CL3P76YOTELEG3YQ.jpg" width="500" height="300" alt="Película 6">
+
+            </div>
+        </section>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/HTML/practico/public/musica.html">Música</a></li>
+            <li><a href="/HTML/practico/public/comida.html">Comida</a></li>
+            <li><a href="/HTML/practico/index.html">Inicio</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

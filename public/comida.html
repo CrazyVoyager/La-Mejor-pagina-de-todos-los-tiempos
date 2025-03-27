@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida</title>
+    <style>
+        body {
+            color: white;
+            font-family: "Comic Sans MS", cursive;
+            background-image: url('https://i.pinimg.com/736x/fe/8f/73/fe8f7350bf24b567ab1a93f208c78db7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+        }
+    </style>
+    <audio id="inTheEnd" controls autoplay loop>
+        <source src="/HTML/practico/assets/InTheEnd.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('inTheEnd');
+            audio.volume = 0.3;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mis Comidas Favoritas</h1>
+        <section>
+            <div class="food-section">
+                <h3>1. Lasaña</h3>
+                    <img src="https://www.tornamesa.co/imagenes/9788416/978841643500.GIF" width="500" height="300" alt="Comida 1">
+                </a>
+            </div>
+
+            <div class="food-section">
+                <h3>2. Desayuno de campiones (Cancer)</h3>
+                    <img src="https://pbs.twimg.com/media/FSefIkZXMAMO88R?format=jpg&name=large" width="500" height="300" alt="Comida 2">
+                </a>
+            </div>
+
+            <div class="food-section">
+                <h3>3. Pizza con piña</h3>
+
+                    <img src="https://okdiario.com/img/recetas/2017/05/30/pizza-con-pina.jpg" width="500" height="300" alt="Comida 3">
+                </a>
+            </div>
+
+            <div class="food-section">
+                <h3>4. Choripan con manjar</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_vfujY97LFBXXyWE9O9khv-paAgWuvkFV_g&s" width="500" height="300" alt="Comida 4">
+                </a>
+            </div>
+
+            <div class="food-section">
+                <h3>5. Anticucho</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToopx7VGGTEcLsr69dj0Nv1WDRU4swrZ2Fqg&s" width="500" height="300" alt="Comida 5">
+                </a>
+            </div>
+        </section>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/HTML/practico/public/musica.html">Música</a></li>
+            <li><a href="/HTML/practico/public/cine.html">Cine</a></li>
+            <li><a href="/HTML/practico/index.html">Inicio</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
