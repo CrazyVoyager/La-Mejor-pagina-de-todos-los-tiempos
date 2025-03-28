@@ -1,4 +1,6 @@
 let audioPlayer;
+let videoActual = null;
+let videosActivos = new Set();
 
 function initAudio() {
     audioPlayer = document.getElementById('inTheEnd');
@@ -53,14 +55,31 @@ function initAudio() {
     }
 
     function onPlayerStateChange(event) {
-        // Solo pausa la música cuando el video comienza a reproducirse (estado 1)
         if (event.data == YT.PlayerState.PLAYING) {
-            localStorage.setItem('wasPlaying', !audioPlayer.paused);
+            if (videoActual && videoActual !== event.target && 
+                videoActual.getPlayerState() === YT.PlayerState.PLAYING) {
+                videoActual.pauseVideo();
+            }
+            videoActual = event.target;
+            localStorage.setItem('wasPlaying', 'true');
             audioPlayer.pause();
         }
-        // Reanuda la música cuando el video está en pausa (estado 2) o terminado (estado 0)
+        
         if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
-            if (localStorage.getItem('wasPlaying') === 'true') {
+            // Verifica si hay algún video reproduciéndose
+            let algunVideoReproduciendo = false;
+            let iframes = document.getElementsByTagName('iframe');
+            
+            for(let i = 0; i < iframes.length; i++) {
+                let player = YT.get(iframes[i].id);
+                if (player && player.getPlayerState() === YT.PlayerState.PLAYING) {
+                    algunVideoReproduciendo = true;
+                    break;
+                }
+            }
+            
+            // Si no hay videos reproduciéndose, reanuda el audio
+            if (!algunVideoReproduciendo) {
                 audioPlayer.play();
             }
         }
